@@ -25,8 +25,11 @@
         </div>
         <div class="content">
             <p>Now, basically every country on Earth contributes to climate change. Everyone needs power, everyone needs fuel, everyone needs something and that something usually releases pollutants. But which countries have the most impact?</p>
+            <div class="chart">
+                <canvas id="countries"></canvas>
+            </div>
             <script>
-                const ctx = document.getElementById('myChart');
+                const ctx = document.getElementById('countries');
 
                 new Chart(ctx, {
                     type: 'bar',
@@ -47,9 +50,6 @@
                     }
                 });
             </script>
-            <div class="chart">
-                <canvas id="countries"></canvas>
-            </div>
         </div>
     </body>
 </html>
