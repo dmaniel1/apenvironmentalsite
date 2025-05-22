@@ -1,1 +1,87 @@
-
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #19592a;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    width: 100%;
+}
+.navbar a {
+    color: #faf2e3;
+    display: block;
+    text-align: center;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.navbar a:hover {
+    background-color: #2da64d;
+    color: #262523;
+    box-shadow: 0 0 5px 3px #2da64d;
+}
+.navbar a.active {
+    background-color: #10381a;
+    box-shadow: 0 0 5px 3px #10381a;
+}
+.navbar a.active:hover {
+    background-color: #2da64d;
+    color: #262523;
+    box-shadow: 0 0 5px 3px #2da64d;
+}
+.header {
+    display: block;
+    height: 300px;
+    background-color: #c9c7c353;
+    /* padding-top: 50px; */
+    margin: 0;
+    overflow: hidden;
+}
+.header h1 {
+    z-index: 5;
+    font-size: 40px;
+    padding-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    margin-bottom: 0;
+}
+.header h2 {
+    z-index: 5;
+    font-size: 25px;
+    color: gray;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0;
+    margin-top: 0;
+}
+.content {
+    margin: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+#homehdr {
+    background-image: url("/images/homehdr.jpeg");
+    background-size: contain;
+    overflow: hidden;
+}
+.tint {
+    display: block;
+    z-index: 1;
+    margin-top: -200px;
+    height: 500px;;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(70, 50, 2, 0.6);
+}

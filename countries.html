@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Which countries are most responsible?</title>
+        <link rel="stylesheet" href="general.css">
+        <script type="text/javascript" src="main.js" defer></script>
+        <script src="node_modules/chartjs/dist/chart.umd.js"></script>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="whycare.html">Why care who?</a>
+            <a class="active" href="countries.html">Which countries?</a>
+            <a href="sectors.html">Which sectors?</a>
+            <a href="action.html">What can we do?</a>
+            <a href="citations.html">Citations</a>
+        </div>
+        <div class="header" id="counthdr">
+            <h1>Which countries are most responsible</h1>
+            <h2>Does the answer suprise you?</h2>
+        </div>
+        <div class="content">
+            <p>Now, basically every country on Earth contributes to climate change. Everyone needs power, everyone needs fuel, everyone needs something and that something usually releases pollutants. But which countries have the most impact?</p>
+            <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                    },
+                    options: {
+                    scales: {
+                        y: {
+                        beginAtZero: true
+                        }
+                    }
+                    }
+                });
+            </script>
+            <div class="chart">
+                <canvas id="countries"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
