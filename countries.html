@@ -3,8 +3,6 @@
     <head>
         <title>Which countries are most responsible?</title>
         <link rel="stylesheet" href="general.css">
-        <script type="text/javascript" src="main.js" defer></script>
-        <script src="node_modules/chartjs/dist/chart.umd.js"></script>
         <meta charset="utf-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,29 +22,56 @@
             <h2>Does the answer suprise you?</h2>
         </div>
         <div class="content">
-            <p>Now, basically every country on Earth contributes to climate change. Everyone needs power, everyone needs fuel, everyone needs something and that something usually releases pollutants. But which countries have the most impact?</p>
-            <div class="chart">
-                <canvas id="countries"></canvas>
+            <p>Now, basically every country on Earth contributes to climate change. Everyone needs power, everyone needs fuel, everyone needs something and that something usually releases pollutants. But which countries have the most impact? You may believe it is the less-developed countries, as they have less resources to access more renewable energy sources, and while this is true, they are not the greatest polluters.</p>
+            <div class="column">
+                <div class="chart">
+                    <canvas id="countries"></canvas>
+                    <p><a href="https://www.wri.org/insights/interactive-chart-shows-changes-worlds-top-10-emitters" target="_blank">Source</a>. EU (27) is the entire EU.</p>
+                </div>
+                <p>That would be China, the US, and India. Why? Well, for one, they are the most populous countries. India has the largest population, followed by China and the US. This causes them to require significantly more energy, agricultural output, industry, exports and imports, transportation, infrastructure, and more. All of these factors cause them to produce the most emissions in the world. But, that's not the only reason.<br>Let's start with China. Ever since industrialization, China has relied heavily on coal. In addition to this, many places in China have terrible working environments that are poorly </p>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
                 const ctx = document.getElementById('countries');
 
                 new Chart(ctx, {
-                    type: 'bar',
+                    type: 'pie',
                     data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['China', 'United States', 'India', 'EU (27)', 'Russia', 'Japan','Brazil', 'Indonesia', 'Iran', 'Canada', 'Others'],
                     datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        borderWidth: 1
+                        label: ' MtCO2e',
+                        data: [12705, 6001, 3394, 3383, 2476, 1665, 1057, 1002, 893, 736, 15298],
+                        backgroundColor: [
+                            '#EE1C25',
+                            '#0A3161',
+                            '#FF671F',
+                            '#003399',
+                            '#D62718',
+                            '#BC002D',
+                            '#009739',
+                            '#ff0000',
+                            '#239F40',
+                            '#D80621',
+                            'gray'
+                        ],
+                        hoverOffset: 4
                     }]
                     },
                     options: {
-                    scales: {
-                        y: {
-                        beginAtZero: true
-                        }
-                    }
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: "Biggest Contributors to Climate Change (total emmissions)"
+                            },
+                            legend: {
+                                labels: {
+                                    font: {
+                                        family: "'Ubuntu', sans-serif"
+                                    }
+                                }
+                            }
+                        },
+                        animation: false
                     }
                 });
             </script>
