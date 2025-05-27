@@ -67,7 +67,7 @@ br {
 .header h2 {
     z-index: 5;
     font-size: 25px;
-    color: gray;
+    color: rgb(106, 128, 106);
     font-style: italic;
     text-align: center;
     vertical-align: middle;
@@ -80,8 +80,24 @@ br {
     margin-right: 80px;
 }
 #homehdr {
+    color: rgb(79, 157, 0);
     background-image: url("/images/homehdr.jpeg");
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#midhdr {
+    color: rgb(79, 157, 0);
+    background-image: url("/images/protest.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#counthdr {
+    color: rgb(30, 61, 0);
+    background-image: url("/images/pollution1.jpg");
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 .tint {
@@ -91,7 +107,7 @@ br {
     height: 500px;;
     width: 100%;
     overflow: hidden;
-    background: rgba(70, 50, 2, 0.6);
+    background: rgba(49, 40, 20, 0.8);
 }
 .chart {
     flex: 2;
@@ -110,4 +126,12 @@ br {
     display: flex;
     column-count: 3;
     column-gap: 10px;
+}
+.column p {
+    flex: 1;
+}
+sub {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
