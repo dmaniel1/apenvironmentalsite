@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body {
+    background-color: rgb(224, 233, 224);
     margin: 0;
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
@@ -100,6 +101,23 @@ br {
     background-position: center;
     overflow: hidden;
 }
+#yhdr {
+    color: rgb(79, 157, 0);
+    background-image: url("/images/cityscape.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#sectorhdr {
+    color: rgb(30, 61, 0);
+    background-image: url("/images/pollution2.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#sectorhdr h2 {
+    color: rgb(56, 68, 56);
+}
 .tint {
     display: block;
     z-index: 1;
@@ -107,7 +125,7 @@ br {
     height: 500px;;
     width: 100%;
     overflow: hidden;
-    background: rgba(49, 40, 20, 0.8);
+    background: rgba(32, 49, 20, 0.8);
 }
 .chart {
     flex: 2;

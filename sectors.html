@@ -22,7 +22,61 @@
             <h2>The people love their pollution... Or do they?</h2>
         </div>
         <div class="content">
-            <p></p>
+            <p>Energy, agriculture, industry, transportation, construction, and more. These are all examples of the different sectors of the countries of the world.</p>
+            <div class="column">
+                <div class="chart">
+                    <canvas id="sectors"></canvas>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById("sectors");
+
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Electricity and Heat', 'Industry', 'Agriculture, Forestry, and general land use', 'Transportation', 'Buildings and Infrastructure'],
+                        datasets: [{
+                            data: [34, 24, 22, 15, 6],
+                            borderColor: 'rgb(224, 233, 224)',
+                            backgroundColor: [
+                                '#ad0202',
+                                '#403e3e',
+                                '#035c0a',
+                                '#00a1de',
+                                '#705e53'
+                            ],
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: "Percentage of Global Emissions by Sector"
+                            },
+                            legend: {
+                                labels: {
+                                    font: {
+                                        family: "'Ubuntu',sans-serif"
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(value, context) {
+                                        let label = context.dataset.parsed || 'err';
+                                        if (context.parsed.y !== null) {
+                                            label += "%";
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                })
+            </script>
         </div>
     </body>
 </html>
