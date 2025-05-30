@@ -22,11 +22,14 @@
             <h2>The people love their pollution... Or do they?</h2>
         </div>
         <div class="content">
-            <p>Energy, agriculture, industry, transportation, construction, and more. These are all examples of the different sectors of the countries of the world.</p>
+            <p>Energy, agriculture, industry, transportation, construction, and more. These are all examples of the different sectors of the countries of the world. Now, when you think of air pollution, the sector you may think will be at the top of the list is probably industry. You usually think of big smokestacks billowing large amounts of black smog into the air, destroying the landscape around it. While industry is on the top of the list, the top one may suprise you.<br>The top producer of air pollution of all the sectors is actually electricity generation (please note that this list does not include energy use for industrial activities as electricity generation but industry). Once you think about it, it makes sense. Everything that we use that requires electricity has to get that electricity from somewhere.</p>
             <div class="column">
                 <div class="chart">
                     <canvas id="sectors"></canvas>
+                    <p><a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-overview" target="_blank">Source</a>. Energy use for industrial activities is counted as industrial and not energy.</p>
                 </div>
+                <p>With that said, lets start with electricity air pollution. Why are they so high? Well, as I said earlier, nearly everything in modern-day life requires electricity. From our cell phones to our houses, everthing needs it to run. Due to this high demand, the countries of the world require very large amounts of infrastructure to power their tech. This would be fine, but most countries (especially less-developed ones) use non-renewable energy sources such as coal power plants or natual gas combustion, due to their cheap setup prices, in comparison to renewable energy sources having very high setup prices. But, non-renewable energy is much more expensive in the long run than renewable energy. So why do countries choose non-renewable over renewable? Its much easier to set up a larger amount of non-renewable power plants than it is to set up renewable ones, allowing for a higher electricity output.</p>
+                <p>On top of this, humans can be a very short-sighted species when it comes to planning, so it is also due to people just not caring. On top of that, many renewable energy sources can be unreliable, such as wind turbines only working when its windy, solar panels only being useful if theres a lot of sunlight (but not too much, and they also require a LOT of land to be useful), hydroelectric dams causeing the same issues dams do along with killing fish and disrupting habitats, solar towers burning birds alive, and more. However, there have been many pushes and strides towards more renewable energy. For starters, constant research into renewable energy has made it more reliable, safer, and efficient. Along with this, technologies such as dry and wet scrubbers, electrostatic precipitators, laws like the Clean Air Act, agreements like the Montreal Protocol, and much more.</p>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
@@ -61,22 +64,13 @@
                                         family: "'Ubuntu',sans-serif"
                                     }
                                 }
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(value, context) {
-                                        let label = context.dataset.parsed || 'err';
-                                        if (context.parsed.y !== null) {
-                                            label += "%";
-                                        }
-                                        return label;
-                                    }
-                                }
                             }
-                        }
+                        },
+                        animation: false
                     }
                 })
             </script>
+            <p>Next up, industry. Industry is responsible for the production of the countless products we use on the day-to-day. The billowing smokestacks and large buildings I mentioned earlier were somewhat accurate. The burning of fossil fuels and natural gas for power and heat produce large amounts of pollution. The chemical reactions that produce chemicals, metals, and minerals in these facilities also produce a large amount of pollution. They also indirectly cause pollution due to the power plants they require for electricity often drawing that power from the combustion of fossil fuels. The indirect emissions account for the majority of the industrial sector's emissions. If this list considered the energy production required to run industrial in the energy section, then energy would be below agriculture.</p>
         </div>
     </body>
 </html>
