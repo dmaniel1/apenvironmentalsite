@@ -26,6 +26,9 @@ body {
     transition-duration: 0.3s;
     cursor: pointer;
 }
+.navbar a:link {
+    color: #faf2e3;
+}
 .navbar a:hover {
     background-color: #2da64d;
     color: #262523;
@@ -44,9 +47,15 @@ p {
     line-height: calc(1rem + .5rem);
 }
 br {
-    display: block;
+    display: inline-block;
     content: " ";
-    margin-top: 30px;
+    margin-top: 50px;
+}
+a:link {
+    color: #2da64d;
+}
+a:active {
+    color: #195a2a;
 }
 .header {
     display: block;
