@@ -141,6 +141,13 @@ a:active {
     background-position: center;
     overflow: hidden;
 }
+#actionhdr {
+    color: rgb(79, 157, 0);
+    background-image: url("/images/conference.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
 .tint {
     display: block;
     z-index: 1;
