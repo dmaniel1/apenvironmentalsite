@@ -98,35 +98,35 @@ a:active {
 }
 #homehdr {
     color: rgb(79, 157, 0);
-    background-image: url("/images/homehdr.jpeg");
+    background-image: url("./images/homehdr.jpeg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 #midhdr {
     color: rgb(79, 157, 0);
-    background-image: url("/images/protest.jpg");
+    background-image: url("./images/protest.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 #counthdr {
     color: rgb(30, 61, 0);
-    background-image: url("/images/pollution1.jpg");
+    background-image: url("./images/pollution1.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 #yhdr {
     color: rgb(79, 157, 0);
-    background-image: url("/images/cityscape.jpg");
+    background-image: url("./images/cityscape.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 #sectorhdr {
     color: rgb(30, 61, 0);
-    background-image: url("/images/pollution2.jpg");
+    background-image: url("./images/pollution2.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -136,14 +136,14 @@ a:active {
 }
 #citationhdr {
     color: rgb(79, 157, 0);
-    background-image: url("/images/scroll.png");
+    background-image: url("./images/scroll.png");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 #actionhdr {
     color: rgb(79, 157, 0);
-    background-image: url("/images/conference.png");
+    background-image: url("./images/conference.png");
     background-size: cover;
     background-position: center;
     overflow: hidden;
